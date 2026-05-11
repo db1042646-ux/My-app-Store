@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debashish App Hub</title>
+    <style>
+        /* আগের সব এনিমেশন স্টাইল এখানেও আছে */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .glass-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            text-align: center;
+        }
+
+        /* অ্যাপ কার্ডে ছবির জন্য নতুন স্টাইল */
+        .apk-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center; /* ছবি ও লেখা এক লাইনে রাখার জন্য */
+            gap: 15px; /* ছবি ও লেখার মাঝের গ্যাপ */
+            transition: 0.3s;
+        }
+
+        .apk-card:hover { transform: scale(1.03); background: rgba(255, 255, 255, 0.3); }
+
+        /* অ্যাপ আইকন স্টাইল */
+        .app-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            object-fit: cover;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .info { text-align: left; flex-grow: 1; }
+        .info h3 { margin: 0; font-size: 1.1rem; }
+        .info span { font-size: 0.8rem; opacity: 0.7; }
+
+        .download-btn {
+            background: #fff;
+            color: #e73c7e;
+            padding: 8px 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="glass-container">
+    <h1>📱 MY APP STORE</h1>
+    <p>Download the latest APK files from here</p>
+
+    <div class="apk-card">
+        <img src="YOUR_IMAGE_LINK_1" alt="Icon" class="app-icon">
+        <div class="info">
+            <h3>App Name 1</h3>
+            <span>15MB | v1.0</span>
+        </div>
+        <a href="YOUR_APK_LINK_1" class="download-btn">DOWNLOAD</a>
+    </div>
+
+    <div class="apk-card">
+        <img src="YOUR_IMAGE_LINK_2" alt="Icon" class="app-icon">
+        <div class="info">
+            <h3>App Name 2</h3>
+            <span>22MB | v2.1</span>
+        </div>
+        <a href="YOUR_APK_LINK_2" class="download-btn">DOWNLOAD</a>
+    </div>
+
+    <footer>&copy; 2026 Debashish | Hosted on Netlify</footer>
+</div>
+
+</body>
+</html>
